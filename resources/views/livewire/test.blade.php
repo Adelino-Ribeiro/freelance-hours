@@ -2,7 +2,7 @@
     
     <h1>Meu component Livewire</h1>
 
-    <input wire::model="search" type="text" placeholder="Search users...">
+    <input wire:model.live="search" />
 
     <ul>
         @foreach ($users as $user)

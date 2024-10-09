@@ -14,7 +14,7 @@ class Test extends Component
     {
         return view('livewire.test', [
             'users' => User::query()
-                    -> when($this -> search, fn($q) => $q -> where('name', 'like', "%{$this -> search}"))
+                    -> when($this -> search, fn($q) => $q -> where('name', 'like', "%{$this -> search}%"))
                     -> get()
         ]);
     }
